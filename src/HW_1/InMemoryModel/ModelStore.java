@@ -27,9 +27,12 @@ public class ModelStore implements iModelChanger {
     public void NotifyChange(iModelChanger sender) {
     }
 
-    public Scene getScene(int num){
-        return new Scene(num, models, flashes);
+    public Scene getScene(int id){
+        for (Scene scene: scenes){
+            if (scene.id == id){
+                return scene;
+            }
+        }
+        return null;
     }
-
-    
 }

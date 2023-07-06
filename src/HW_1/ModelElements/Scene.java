@@ -14,11 +14,11 @@ public class Scene {
         this.flashes = flashes;
     }
 
-    public Type method1(Type type){
+    public <T> T method1(T type){
         return type;
     }
 
-    public Type method2(Type type, Type type2){
+    public <T> T method2(T type, T type2){
         return type;
     }
 
