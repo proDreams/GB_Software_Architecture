@@ -9,6 +9,6 @@ public class PoligonalModel {
 
     public PoligonalModel(List<Texture> textures) {
         this.textures = textures;
-        positions = new ArrayList<>();
+        this.positions = new ArrayList<>();
     }
 }
