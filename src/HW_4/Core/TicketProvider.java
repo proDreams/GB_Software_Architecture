@@ -47,7 +47,7 @@ public class TicketProvider implements ITicketRepo {
      * @return список билетов
      * @throws RuntimeException
      */
-    public List<Ticket> getTickets(int routeNumber) throws RuntimeException{
+    public List<Ticket> getTickets(int routeNumber) throws RuntimeException {
         return ticketRepo.readAll(routeNumber);
     }
 
@@ -58,8 +58,15 @@ public class TicketProvider implements ITicketRepo {
      * @return результат выполнения операции
      */
     public boolean updateTicketStatus(Ticket ticket) {
-        return ticket.getValid();
+        ticket.setValid(false);
+        return ticketRepo.update(ticket);
     }
 
+    public ITicketRepo getTicketRepo() {
+        return ticketRepo;
+    }
 
+    public void setTicketRepo(ITicketRepo ticketRepo) {
+        this.ticketRepo = ticketRepo;
+    }
 }

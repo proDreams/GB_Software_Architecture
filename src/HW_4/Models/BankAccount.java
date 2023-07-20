@@ -6,7 +6,7 @@ package HW_4.Models;
 public class BankAccount {
     private long card;
     private int balance;
-    private long oldCard;
+    private static long oldCard;
 
 
     public BankAccount() {
