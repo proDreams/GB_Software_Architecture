@@ -3,9 +3,9 @@ package HW_3;
 import java.awt.*;
 
 /**
- * Класс описывающий автомобиль Lada Vesta унаследованный от абстрактного класса Car и имплементирующий интерфейс iGasStation
+ * Класс описывающий автомобиль Toyota Land Cruiser унаследованный от абстрактного класса Car и имплементирующий интерфейс iGasStation
  */
-public class Vesta extends Car implements iGasStation {
+public class SUV extends Car implements iGasStation {
     private final iGasStation gasStation;
 
     /**
@@ -21,7 +21,7 @@ public class Vesta extends Car implements iGasStation {
      * @param engineCapacity   - объем двигателя в автомобиле
      * @param gasStation       - объект интерфейса заправочной станции
      */
-    public Vesta(String brand, String model, Color color, String bodyType, int wheelsCount, String fuelType, String transmissionType, float engineCapacity, iGasStation gasStation) {
+    public SUV(String brand, String model, Color color, String bodyType, int wheelsCount, String fuelType, String transmissionType, float engineCapacity, iGasStation gasStation) {
         super(brand, model, color, bodyType, wheelsCount, fuelType, transmissionType, engineCapacity);
         this.gasStation = gasStation;
     }
@@ -50,7 +50,6 @@ public class Vesta extends Car implements iGasStation {
     public void turnWipers() {
         super.turnWipers();
     }
-
 
     @Override
     public void refill() {
